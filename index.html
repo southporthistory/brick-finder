@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brick Finder | Southport Historical Society</title>
+  <meta name="description" content="Find commemorative bricks at Southport Historical Society sites.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="Southport Historical Society home">
+        <span class="brand-mark">SHS</span>
+        <span class="brand-text">Southport Historical Society</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#search">Search</a>
+        <a href="#browse">Browse</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="search">
+      <div class="hero-inner">
+        <p class="eyebrow">Southport Historical Society</p>
+        <h1>Brick Finder</h1>
+        <p class="tagline">People. Places. Stories. Set in Stone.</p>
+
+        <div class="search-wrap">
+          <label class="sr-only" for="brick-search">Search bricks</label>
+          <input id="brick-search" type="search" autocomplete="off"
+                 placeholder="Search for a name, word, or phrase...">
+          <button id="clear-search" type="button">Clear</button>
+        </div>
+        <p class="search-help">Try a last name, a business, a date, or a special word.</p>
+
+        <div class="stats" aria-live="polite">
+          <strong id="result-count">Loading bricks…</strong>
+          <span id="scope-label">Fort Johnston — Front Sidewalk</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="browse">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Browse the collection</p>
+          <h2>Find a brick</h2>
+        </div>
+        <div class="filters">
+          <label for="column-filter">Column</label>
+          <select id="column-filter">
+            <option value="">All columns</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="results" class="results-grid" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <h3>No bricks matched that search.</h3>
+        <p>Try fewer words, a surname, a date, or another memorable word from the inscription.</p>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2>Search what you remember.</h2>
+      </div>
+      <p>The Brick Finder searches the complete inscription text and physical location. Purchaser and contact information remain in the Society's internal records and are not published here.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Southport Historical Society · Brick Finder prototype</p>
+  </footer>
+
+  <dialog id="brick-dialog">
+    <button class="dialog-close" id="dialog-close" aria-label="Close">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
