@@ -1,32 +1,27 @@
-# SHS Brick Finder Prototype
+# Southport Historical Society Brick Finder
 
-This is a static GitHub Pages-ready prototype for the Southport Historical Society Brick Finder.
+GitHub Pages-ready branded Brick Finder.
 
-## Files
-
-- `index.html` — public interface
-- `styles.css` — SHS-inspired styling
-- `app.js` — client-side search/filter behavior
-- `bricks.json` — public-only data export
+## Current data
+- Front Walkway: 484 transcribed bricks
+- Side Walkway: 178 transcribed bricks
+- Total: 662 inventoried bricks
 
 ## Privacy
+`bricks.json` contains public locator data only. Do not add purchaser/contact information.
 
-`bricks.json` contains only public locator information: Brick ID, site, area, column, brick number, location, inscription, optional public image filename, and optional story URL.
+## Location image replacement
+The location panel intentionally uses:
 
-Purchaser/contact information belongs only in the internal `SHS_Brick_Master_Inventory.xlsx` and must never be copied into this repository.
+`assets/fort-location-map.jpg`
 
-## Publishing
+When SHS gets a good drone photograph, resize/crop it for the web and replace that file **with the same filename**. The HTML does not need to change.
 
-Create a GitHub repository, add these files at the repository root, and enable GitHub Pages for the main branch. The site can later be mapped to a custom SHS subdomain.
+## Branding assets
+- `assets/shs-logo.png`
+- `assets/fort-johnston.jpg`
 
-## Adding photos later
+The SHS blue is `#000060`.
 
-Keep original photos in SHS institutional storage. Create web-sized derivative images named by Brick ID, for example:
-
-`FJ-FR-C04-B001.jpg`
-
-Place those derivatives in an `images/` folder and set the matching `image` field in `bricks.json`.
-
-## Current scope
-
-This prototype contains 484 transcribed Fort Johnston Front Sidewalk bricks. Column 3 is only partially inventoried in the current source workbook.
+## Brick photos
+Verified web-sized brick photos belong in `assets/bricks/`. The data field `image` in `bricks.json` points to them.
