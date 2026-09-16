@@ -10,6 +10,12 @@ const emptyState = document.querySelector('#empty-state');
 const dialog = document.querySelector('#brick-dialog');
 const dialogBody = document.querySelector('#dialog-body');
 const dialogClose = document.querySelector('#dialog-close');
+const locatorEmpty = document.querySelector('#locator-empty');
+const locatorView = document.querySelector('#locator-view');
+const locatorTitle = document.querySelector('#locator-title');
+const locatorTarget = document.querySelector('#locator-target');
+const locatorOrientation = document.querySelector('#locator-orientation');
+const walkwayGrid = document.querySelector('#walkway-grid');
 
 const escapeHtml = str => String(str ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 const normalize = s => String(s ?? '').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
@@ -18,9 +24,14 @@ function searchText(b){
   return normalize([b.id,b.inscription,b.location,b.site,b.area,`column ${b.column}`,`brick ${b.brick_number}`].join(' '));
 }
 function shortTitle(b){
-  const clean = b.inscription.replace(/\s+/g,' ').trim();
-  const first = clean.split(/(?<=[.!?])\s+/)[0];
-  return first.length > 55 ? first.slice(0,52).trim()+'…' : first;
+  const clean = String(b.inscription ?? '').replace(/\s+/g,' ').trim();
+  if (clean.length <= 55) return clean;
+
+  // Brick inscriptions contain abbreviations and initials (Capt., Col., Dr., W., Jr., etc.),
+  // so do not treat punctuation as a sentence boundary. Trim at a word boundary instead.
+  const shortened = clean.slice(0, 55);
+  const lastSpace = shortened.lastIndexOf(' ');
+  return (lastSpace > 35 ? shortened.slice(0, lastSpace) : shortened).trim() + '…';
 }
 function refreshColumns(){
   const area = walkwayFilter.value;
@@ -75,9 +86,36 @@ function render(){
   });
 }
 function showLocation(b){
-  document.body.classList.remove('highlight-front','highlight-side');
-  document.body.classList.add(b.area==='Front Walkway'?'highlight-front':'highlight-side');
-  document.querySelector('#locations').scrollIntoView({behavior:'smooth',block:'center'});
+  const areaBricks = bricks.filter(x => x.area === b.area);
+  const columns = [...new Set(areaBricks.map(x => Number(x.column)))].sort((a,c)=>a-c);
+  const numbersByColumn = new Map();
+  columns.forEach(c => {
+    numbersByColumn.set(c, new Set(areaBricks.filter(x=>Number(x.column)===c).map(x=>Number(x.brick_number))));
+  });
+  const maxBrick = Math.max(...areaBricks.map(x=>Number(x.brick_number)));
+
+  locatorEmpty.hidden = true;
+  locatorView.hidden = false;
+  locatorTitle.textContent = b.area;
+  locatorTarget.textContent = `Column ${b.column} · Brick ${b.brick_number}`;
+  locatorOrientation.textContent = b.area === 'Side Walkway'
+    ? 'Brick 1 begins at the porch →'
+    : 'Brick numbering begins at the top of each column';
+
+  walkwayGrid.style.setProperty('--column-count', columns.length);
+  walkwayGrid.innerHTML = columns.map(c => {
+    const nums = numbersByColumn.get(c);
+    const cells = Array.from({length:maxBrick},(_,i)=>i+1).map(n => {
+      const exists = nums.has(n);
+      const selected = Number(b.column)===c && Number(b.brick_number)===n;
+      const classes = ['brick-cell', exists ? '' : 'brick-gap', selected ? 'selected-brick' : ''].filter(Boolean).join(' ');
+      return `<div class="${classes}" ${selected?'aria-current="true"':''}>${exists ? n : ''}</div>`;
+    }).join('');
+    return `<div class="brick-column ${Number(b.column)===c?'selected-column':''}"><div class="column-label">Column ${c}</div>${cells}</div>`;
+  }).join('');
+
+  document.querySelector('#locations').scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(()=>walkwayGrid.querySelector('.selected-brick')?.scrollIntoView({behavior:'smooth',block:'center',inline:'center'}),350);
 }
 function openBrick(b){
   dialogBody.innerHTML=`
