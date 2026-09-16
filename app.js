@@ -25,14 +25,25 @@ function searchText(b){
 }
 function shortTitle(b){
   const clean = String(b.inscription ?? '').replace(/\s+/g,' ').trim();
-  if (clean.length <= 55) return clean;
+  if (!clean) return '';
 
-  // Brick inscriptions contain abbreviations and initials (Capt., Col., Dr., W., Jr., etc.),
-  // so do not treat punctuation as a sentence boundary. Trim at a word boundary instead.
-  const shortened = clean.slice(0, 55);
-  const lastSpace = shortened.lastIndexOf(' ');
-  return (lastSpace > 35 ? shortened.slice(0, lastSpace) : shortened).trim() + '…';
+  // Brick inscriptions often put the identifying name first and a message in quotes.
+  // Use the text before the first quotation mark when it makes a useful title.
+  const quotePos = clean.search(/["“”]/);
+  if (quotePos >= 4) {
+    const beforeQuote = clean.slice(0, quotePos).trim().replace(/[,:;\-–—]+$/,'').trim();
+    if (beforeQuote.length >= 4 && beforeQuote.length <= 80) return beforeQuote;
+  }
+
+  // Otherwise shorten by words, never by sentence punctuation: periods are common
+  // in Capt., Col., Dr., Jr., Sr., and people's initials.
+  const max = 62;
+  if (clean.length <= max) return clean;
+  const clipped = clean.slice(0, max + 1);
+  const lastSpace = clipped.lastIndexOf(' ');
+  return (lastSpace > 30 ? clipped.slice(0, lastSpace) : clean.slice(0,max)).trim() + '…';
 }
+
 function refreshColumns(){
   const area = walkwayFilter.value;
   const current = columnFilter.value;
