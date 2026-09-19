@@ -17,6 +17,13 @@ const locatorTarget = document.querySelector('#locator-target');
 const locatorOrientation = document.querySelector('#locator-orientation');
 const walkwayGrid = document.querySelector('#walkway-grid');
 
+const STORY_FORM_BASE = 'https://docs.google.com/forms/d/e/1FAIpQLSdOFzgx8B_7indD-BukJ8HxrZsMzTPBzb68bQur6vEs8nYoRg/viewform?usp=pp_url';
+function brickStoryFormUrl(b){
+  return STORY_FORM_BASE
+    + '&entry.151104679=' + encodeURIComponent(b.id)
+    + '&entry.284776136=' + encodeURIComponent(b.inscription);
+}
+
 const escapeHtml = str => String(str ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 const normalize = s => String(s ?? '').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 
@@ -88,7 +95,10 @@ function render(){
           <strong>Location</strong><span>${escapeHtml(b.location)}</span>
           <strong>Brick ID</strong><span>${escapeHtml(b.id)}</span>
         </div>
-        <button class="map-link" type="button">View Fort Johnston location</button>
+        <div class="result-actions">
+          <button class="map-link" type="button">View Fort Johnston location</button>
+          <a class="story-link" href="${escapeHtml(brickStoryFormUrl(b))}" target="_blank" rel="noopener">Tell Us About This Brick</a>
+        </div>
       </div>`;
     card.querySelector('.result-copy').addEventListener('dblclick',()=>openBrick(b));
     if(b.image) card.querySelector('.result-photo').addEventListener('click',()=>openBrick(b));
