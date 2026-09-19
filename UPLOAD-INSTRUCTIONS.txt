@@ -1,0 +1,16 @@
+SHS Brick Finder — GitHub-ready Front Walkway photo update
+
+Contents:
+- bricks.json: corrected dataset with 714 currently indexed Fort Johnston bricks
+  - 536 Front Walkway
+  - 178 Side Walkway
+- assets/bricks/: 536 web-sized Front Walkway photographs
+
+Upload/replace these paths in the brick-finder repository:
+1. Replace the repository's bricks.json with this bricks.json.
+2. Upload the contents of assets/bricks/ into assets/bricks/.
+3. Commit the changes.
+4. After GitHub Pages deploys, test several Front Walkway search results and confirm their photographs display.
+
+Old Jail bricks are not included in this dataset.
+Side Walkway records remain in bricks.json but this package does not add Side Walkway photographs.
