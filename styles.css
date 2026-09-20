@@ -117,3 +117,14 @@ dialog::backdrop{background:rgba(0,0,50,.55)}
 .result-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px}
 .story-link{font-size:.92rem;padding:8px 12px}
 @media (max-width:760px){.brick-options{grid-template-columns:1fr}}
+
+/* Multi-page Brick Finder */
+.finder-page{max-width:1500px;margin:auto;padding:38px 42px;display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,.72fr);gap:34px}
+.finder-intro{font-size:1.08rem;line-height:1.5;color:#30374b}
+.subhead{min-height:210px;background:linear-gradient(90deg,#fffdf7 0%,#fffdf7 55%,#eaf3fa 100%);display:flex;align-items:center;gap:30px;padding:28px max(32px,calc((100vw - 1400px)/2))}
+.subhead img{width:130px;max-height:160px;object-fit:contain}.subhead h1{color:var(--navy);font-size:clamp(2.7rem,5vw,5rem);line-height:1;margin:8px 0 5px;text-transform:uppercase}.subhead p{font-size:1.3rem;font-style:italic;color:var(--navy);margin:0}
+.content-page{max-width:1000px;margin:0 auto;padding:55px 42px 70px;min-height:520px}.content-page h2{font-size:2.8rem}.content-page p{font-size:1.08rem;line-height:1.7}.content-page .lead{font-size:1.3rem;color:#263252}
+.stat-band{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0}.stat-band div{background:var(--cream);border-top:4px solid var(--gold);padding:22px;text-align:center}.stat-band strong{display:block;color:var(--navy);font-size:2.5rem}.stat-band span{display:block;margin-top:6px}
+.story-tip{margin:34px 0 18px;padding:20px 22px;background:var(--cream);border-left:5px solid var(--gold)}.story-tip p{margin-bottom:0}.text-link{color:#0348ae;font-weight:700}.quiet-note{color:var(--muted);font-size:.92rem!important}
+@media(max-width:1120px){.finder-page{grid-template-columns:1fr}.main-nav a:nth-child(4),.main-nav a:nth-child(5){display:block}}
+@media(max-width:720px){.finder-page{padding:26px 16px}.subhead{min-height:170px;padding:20px 18px;gap:18px}.subhead img{width:85px}.subhead .society-name{font-size:1.2rem}.subhead h1{font-size:2.35rem}.subhead p{font-size:1rem}.content-page{padding:38px 20px 55px}.content-page h2{font-size:2.2rem}.stat-band{grid-template-columns:1fr}.filter-row select{width:100%}}
