@@ -1,125 +1,16 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brick Finder | Southport Historical Society</title>
-  <meta name="description" content="Search commemorative bricks at Fort Johnston in Southport, North Carolina.">
-  <link rel="stylesheet" href="styles.css">
-</head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find a Brick | Southport Historical Society</title><meta name="description" content="Find commemorative bricks at Fort Johnston in Southport, North Carolina."><link rel="stylesheet" href="styles.css"></head>
 <body>
-<header class="masthead">
-  <div class="masthead-inner">
-    <img class="shs-logo" src="assets/shs-logo.png" alt="Southport Historical Society">
-    <div class="brand-copy">
-      <div class="society-name">Southport Historical Society</div>
-      <div class="society-tagline"><span></span>Preserving Our Past. Inspiring Our Future.<span></span></div>
-      <h1>Brick Finder</h1>
-      <p>Explore the stories in our bricks at Fort Johnston.</p>
-    </div>
-    <div class="fort-hero" aria-hidden="true"></div>
-    <div class="standing">Standing<br>on History.</div>
-  </div>
-</header>
-
-<nav class="main-nav" aria-label="Brick Finder navigation">
-  <a class="active" href="#search">Find a Brick</a>
-  <a href="https://www.bricksrus.com/donorsite/southporthistoricalsociety" target="_blank" rel="noopener">Purchase a Brick</a>
-  <a href="#about">About the Bricks</a>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOFzgx8B_7indD-BukJ8HxrZsMzTPBzb68bQur6vEs8nYoRg/viewform?usp=sharing&amp;ouid=106095055272391082675" target="_blank" rel="noopener">Tell Us About Your Brick</a>
-  <a href="https://www.southporthistoricalsociety.org/" target="_blank" rel="noopener">Southport Historical Society</a>
-</nav>
-
-<main class="page">
-  <section class="search-panel" id="search">
-    <h2>Find a Brick</h2>
-    <div class="search-row">
-      <div class="search-box">
-        <span class="search-icon" aria-hidden="true">⌕</span>
-        <label class="sr-only" for="brick-search">Search bricks</label>
-        <input id="brick-search" type="search" placeholder="Enter a name, inscription, or keyword..." autocomplete="off">
-      </div>
-      <button id="search-button">Search</button>
-    </div>
-    <p class="search-help">Search by name, inscription, family, business, date, or military unit.</p>
-
-    <div class="filter-row">
-      <label for="walkway-filter">Location:</label>
-      <select id="walkway-filter">
-        <option value="">All Fort Johnston bricks</option>
-        <option value="Front Walkway">Front Walkway</option>
-        <option value="Side Walkway">Side Walkway</option>
-      </select>
-      <label for="column-filter">Column:</label>
-      <select id="column-filter"><option value="">All columns</option></select>
-    </div>
-
-    <div class="results-heading">
-      <h2>Search Results</h2>
-      <span id="result-summary"></span>
-      <button class="link-button" id="clear-search" type="button">Clear search</button>
-    </div>
-    <div id="results" class="results"></div>
-    <div id="empty-state" class="empty-state" hidden>
-      <strong>No bricks matched that search.</strong>
-      <p>Try a surname, date, organization, or another memorable word from the inscription.</p>
-    </div>
-  </section>
-
-  <aside class="location-panel" id="locations">
-    <h2>Fort Johnston Brick Locations</h2>
-    <p>Commemorative bricks are located on the <strong>Front Walkway</strong> and the <strong>Side Walkway</strong> at Fort Johnston.</p>
-
-    <div class="map-frame">
-      <img id="location-map-image" src="assets/fort-location-map.jpg" alt="Fort Johnston. A detailed overhead brick-location image will replace this temporary photograph.">
-      <div class="map-placeholder">
-        <strong>Detailed location view coming next</strong>
-        <span>This image is intentionally replaceable with the planned drone photograph.</span>
-      </div>
-    </div>
-
-    <div class="walkway-key">
-      <div><span class="key-line front"></span><strong>Front Walkway</strong><small>Columns 1–9</small></div>
-      <div><span class="key-line side"></span><strong>Side Walkway</strong><small>Columns 1–6 · brick 1 begins at the porch</small></div>
-    </div>
-
-    <p class="map-note"><strong>Site layout:</strong> The Front Walkway runs across the front and ends at the right side of the front porch. The Side Walkway is a separate parallel walk slightly behind it; it runs toward the porch and meets the wooden ramp leading up to the left side of the porch.</p>
-
-    <div class="replace-note"><strong>Easy replacement:</strong> later, replace <code>assets/fort-location-map.jpg</code> with the drone image using the same filename. No page code needs to change.</div>
-  </aside>
-
-  <section class="about-panel" id="about">
-    <div class="about-intro">
-      <p class="eyebrow">Southport's commemorative bricks</p>
-      <h2>People. Places. Stories. Set in Stone.</h2>
-      <p>Southport's commemorative bricks tell hundreds of small pieces of our community's story. They honor people, families, friendships, organizations, businesses, milestones and memories connected to Southport.</p>
-      <p>Some celebrate birthdays, anniversaries, graduations, retirements or a family's Southport home. Others remember loved ones or recognize organizations and people who have been part of the life of the community.</p>
-      <p>The Southport Historical Society's Commemorative Brick Program gives people with a connection to Southport a permanent way to mark someone or something meaningful to them while supporting the Society's work to preserve and share Southport history.</p>
-    </div>
-    <div class="purchase-info">
-      <h3>Purchasing a Brick</h3>
-      <p>Brick orders are accepted each year from <strong>October 1 through November 30</strong>. New bricks are installed the following spring, generally by <strong>Memorial Day</strong>.</p>
-      <div class="brick-options">
-        <div><strong>4" × 8" Brick — $100</strong><br>Recommended: up to 3 lines with 18 characters per line.<br>Maximum: 4 lines with 21 characters per line.</div>
-        <div><strong>8" × 8" Paver — $150</strong><br>Recommended: up to 6 lines with 18 characters per line.<br>Maximum: 8 lines with 21 characters per line.</div>
-      </div>
-      <p>Spaces and punctuation count as characters. Engraving is limited to <strong>standard keyboard characters</strong>; special symbols cannot be used.</p>
-      <a class="cta-button" href="https://www.bricksrus.com/donorsite/southporthistoricalsociety" target="_blank" rel="noopener">Purchase a Brick</a>
-    </div>
-  </section>
+<header class="masthead"><div class="masthead-inner"><img class="shs-logo" src="assets/shs-logo.png" alt="Southport Historical Society"><div class="brand-copy"><div class="society-name">Southport Historical Society</div><div class="society-tagline"><span></span>Preserving Our Past. Inspiring Our Future.<span></span></div><h1>Brick Finder</h1><p>Explore the stories in our bricks at Fort Johnston.</p></div><div class="fort-hero" aria-hidden="true"></div><div class="standing">Standing<br>on History.</div></div></header>
+<nav class="main-nav" aria-label="Brick Finder navigation"><a class="active" href="index.html">Find a Brick</a><a href="purchase.html">Purchase a Brick</a><a href="about.html">About the Bricks</a><a href="stories.html">Tell Us About Your Brick</a><a href="https://www.southporthistoricalsociety.org/" target="_blank" rel="noopener">Southport Historical Society</a></nav>
+<main class="finder-page">
+<section class="search-panel" id="search"><p class="eyebrow">Fort Johnston · Southport, North Carolina</p><h2>Find a Brick</h2><p class="finder-intro">Search on any words in the inscription, or narrow the results to a specific walkway and column.</p>
+<div class="search-row"><div class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><label class="sr-only" for="brick-search">Search bricks</label><input id="brick-search" type="search" placeholder="Enter a name, inscription, or keyword..." autocomplete="off"></div><button id="search-button">Search</button></div>
+<p class="search-help">Try a surname, organization, date, military unit, or another memorable word.</p>
+<div class="filter-row"><label for="location-filter">Walkway and column:</label><select id="location-filter"><option value="">All Fort Johnston bricks</option><optgroup label="Front Walkway"><option value="Front Walkway|1">Front Walkway — Column 1</option><option value="Front Walkway|2">Front Walkway — Column 2</option><option value="Front Walkway|3">Front Walkway — Column 3</option><option value="Front Walkway|4">Front Walkway — Column 4</option><option value="Front Walkway|5">Front Walkway — Column 5</option><option value="Front Walkway|6">Front Walkway — Column 6</option><option value="Front Walkway|7">Front Walkway — Column 7</option><option value="Front Walkway|8">Front Walkway — Column 8</option><option value="Front Walkway|9">Front Walkway — Column 9</option></optgroup><optgroup label="Side Walkway"><option value="Side Walkway|1">Side Walkway — Column 1</option><option value="Side Walkway|2">Side Walkway — Column 2</option><option value="Side Walkway|3">Side Walkway — Column 3</option><option value="Side Walkway|4">Side Walkway — Column 4</option><option value="Side Walkway|5">Side Walkway — Column 5</option><option value="Side Walkway|6">Side Walkway — Column 6</option></optgroup></select></div>
+<div class="results-heading"><h2>Search Results</h2><span id="result-summary"></span><button class="link-button" id="clear-search" type="button">Clear search</button></div><div id="results" class="results"></div><div id="empty-state" class="empty-state" hidden><strong>No bricks matched that search.</strong><p>Try a surname, date, organization, or another memorable word from the inscription.</p></div></section>
+<aside class="location-panel" id="locations"><h2>Finding the Brick at Fort Johnston</h2><p>The collection is organized into two separate walkways. Your search result gives you the walkway, column and brick number.</p><div class="map-frame"><img src="assets/fort-location-map.jpg" alt="Fort Johnston brick location view"></div><div class="walkway-key"><div><span class="key-line front"></span><strong>Front Walkway</strong><small>Columns 1–9 · Brick 1 is closest to the porch on the right end.</small></div><div><span class="key-line side"></span><strong>Side Walkway</strong><small>Columns 1–6 · Brick 1 begins closest to the porch.</small></div></div><p class="map-note"><strong>Front Walkway:</strong> runs across the front and ends at the right side of the front porch. <strong>Side Walkway:</strong> is separate, slightly behind the Front Walkway, and runs toward the wooden ramp on the left side of the porch.</p></aside>
 </main>
-
-<footer>
-  <span>© 2026 Southport Historical Society</span>
-  <span>Southport, North Carolina</span>
-  <span class="footer-right">Brick Finder · Site maintained by SHS</span>
-</footer>
-
-<dialog id="brick-dialog">
-  <button id="dialog-close" class="dialog-close" aria-label="Close">×</button>
-  <div id="dialog-body"></div>
-</dialog>
-
-<script src="app.js"></script>
-</body>
-</html>
+<footer><span>© 2026 Southport Historical Society</span><span>Southport, North Carolina</span><span class="footer-right">Brick Finder · Standing on History.</span></footer>
+<dialog id="brick-dialog"><button id="dialog-close" class="dialog-close" aria-label="Close">×</button><div id="dialog-body"></div></dialog><script src="app.js"></script></body></html>
