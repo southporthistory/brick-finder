@@ -191,3 +191,14 @@ button.story-link{border:0;cursor:pointer;font-family:inherit}
 .shs-logo{max-height:215px}
 @media(max-width:1120px){.masthead-inner{height:225px}.brand-copy h1{font-size:clamp(3rem,5vw,5.2rem)}}
 @media(max-width:720px){.masthead-inner{height:auto;min-height:240px}.brand-copy h1{font-size:2.75rem}}
+
+/* Compact masthead: keep all title copy clear of navigation */
+.masthead-inner{height:225px;padding-top:8px;padding-bottom:8px}
+.shs-logo{max-height:185px}
+.society-name{font-size:clamp(1.8rem,2.9vw,3.1rem)}
+.society-tagline{margin:8px 0 3px}
+.brand-copy h1{font-size:clamp(3rem,4.7vw,5.2rem);line-height:.9}
+.brand-copy p{font-size:1.3rem;margin-top:5px}
+.standing{margin-top:22px}
+@media(max-width:1120px){.masthead-inner{height:205px}.shs-logo{max-height:165px}.brand-copy h1{font-size:clamp(2.7rem,4.5vw,4.6rem)}}
+@media(max-width:720px){.masthead-inner{height:auto;min-height:210px}.brand-copy h1{font-size:2.55rem}}
