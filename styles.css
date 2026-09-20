@@ -128,3 +128,19 @@ dialog::backdrop{background:rgba(0,0,50,.55)}
 .story-tip{margin:34px 0 18px;padding:20px 22px;background:var(--cream);border-left:5px solid var(--gold)}.story-tip p{margin-bottom:0}.text-link{color:#0348ae;font-weight:700}.quiet-note{color:var(--muted);font-size:.92rem!important}
 @media(max-width:1120px){.finder-page{grid-template-columns:1fr}.main-nav a:nth-child(4),.main-nav a:nth-child(5){display:block}}
 @media(max-width:720px){.finder-page{padding:26px 16px}.subhead{min-height:170px;padding:20px 18px;gap:18px}.subhead img{width:85px}.subhead .society-name{font-size:1.2rem}.subhead h1{font-size:2.35rem}.subhead p{font-size:1rem}.content-page{padding:38px 20px 55px}.content-page h2{font-size:2.2rem}.stat-band{grid-template-columns:1fr}.filter-row select{width:100%}}
+
+/* Fort Johnston locator refinements */
+.masthead-inner{height:290px;padding-top:12px;padding-bottom:12px}
+.shs-logo{max-height:230px}
+.locator-layout{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:14px;align-items:start}
+.locator-photo-wrap{min-width:0}.locator-photo-wrap .map-frame{min-height:0}.locator-photo-wrap .map-frame img{height:auto;aspect-ratio:4/3;object-fit:cover}
+.walkway-label{position:absolute;background:rgba(255,253,247,.94);border:1px solid #d8d0bd;border-radius:4px;padding:6px 10px;color:var(--navy);font:700 .8rem Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.side-label{left:3%;top:48%}.front-label{left:25%;bottom:8%}
+.illustration-note{text-align:center;color:#42486a;font-style:italic;font-size:.84rem;margin:5px 0 0}
+.grid-card{border:1px solid #b9c9df;background:#f8fbff;overflow:auto;max-height:440px}.grid-title{text-align:center;background:#e8f0fb;color:var(--navy);font:700 .85rem Arial,sans-serif;padding:7px}
+.brick-grid{display:grid;grid-template-columns:34px repeat(9,1fr);min-width:205px;font:600 .58rem Arial,sans-serif;color:var(--navy)}
+.grid-corner,.grid-colhead,.grid-rowhead,.grid-cell{min-height:18px;border-right:1px solid #aac0df;border-bottom:1px solid #aac0df;display:flex;align-items:center;justify-content:center}
+.grid-corner,.grid-colhead,.grid-rowhead{background:#f0f5fc;font-weight:700}.grid-gap{background:#eef0f2;color:transparent}.grid-selected{background:var(--gold);color:var(--navy);font-weight:800;outline:2px solid var(--navy);outline-offset:-2px}
+.numbering-notes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.numbering-notes>div{background:var(--cream);border-left:4px solid var(--gold);padding:11px 13px}.numbering-notes strong{color:var(--navy)}.numbering-notes p{margin:4px 0 0;line-height:1.35;color:#30374b}
+@media(max-width:1250px){.locator-layout{grid-template-columns:1fr}.grid-card{max-height:310px}.brick-grid{font-size:.64rem}}
+@media(max-width:720px){.masthead-inner{min-height:260px}.locator-layout{grid-template-columns:1fr}.numbering-notes{grid-template-columns:1fr}.grid-card{max-height:280px}}
