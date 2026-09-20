@@ -172,3 +172,15 @@ button.grid-cell:hover,button.grid-cell:focus{background:#fff3c9;outline:2px sol
 .side-label{left:4%;top:48%}.front-label{left:27%;bottom:8%}
 @media(max-width:1250px){.grid-card{max-height:none}.brick-grid{font-size:.68rem}}
 @media(max-width:720px){.numbering-notes>div+div{border-left:0;border-top:1px solid #c6d3e5;padding-top:10px;margin-top:8px}.grid-title{display:block}.grid-title span{display:block;margin-top:4px}.brick-grid{min-width:620px}}
+
+/* Approved brick stories */
+button.story-link{border:0;cursor:pointer;font-family:inherit}
+.add-story-link{color:#0348ae;text-decoration:underline;font-size:.9rem}
+.story-article{padding:42px 46px 46px;max-height:82vh;overflow:auto}
+.story-article h2{font-size:2.6rem;margin:0 0 5px}
+.story-brick-ref{color:var(--muted);margin:0 0 24px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.story-contribution{font-size:1.08rem;line-height:1.7}
+.story-contribution p{margin:0 0 1.15em}
+.story-byline{color:#30374b;font-style:italic}
+.story-footer-actions{border-top:1px solid var(--line);margin-top:28px;padding-top:20px}
+@media(max-width:720px){.story-article{padding:32px 24px}.story-article h2{font-size:2.1rem}}
