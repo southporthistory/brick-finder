@@ -169,7 +169,7 @@ button.grid-cell:hover,button.grid-cell:focus{background:#fff3c9;outline:2px sol
 .result-actions .map-link{order:2;margin-top:0;margin-left:4px;font-size:.9rem}
 .map-link::after{content:" →";text-decoration:none}
 .walkway-label{font-size:.82rem}
-.side-label{left:4%;top:48%}.front-label{left:27%;bottom:8%}
+.side-label{left:4%;top:39%}.front-label{left:4%;top:51%;bottom:auto}
 @media(max-width:1250px){.grid-card{max-height:none}.brick-grid{font-size:.68rem}}
 @media(max-width:720px){.numbering-notes>div+div{border-left:0;border-top:1px solid #c6d3e5;padding-top:10px;margin-top:8px}.grid-title{display:block}.grid-title span{display:block;margin-top:4px}.brick-grid{min-width:620px}}
 
