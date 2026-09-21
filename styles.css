@@ -209,3 +209,8 @@ button.story-link{border:0;cursor:pointer;font-family:inherit}
 .society-tagline span{width:72px;flex:0 0 72px}
 @media(max-width:1120px){.masthead-inner{grid-template-columns:130px 1fr 340px;height:205px}}
 @media(max-width:720px){.masthead-inner{grid-template-columns:105px 1fr;height:auto;min-height:210px}}
+
+
+/* Aerial locator labels: place directly on the two brick paths */
+.locator-photo-wrap .map-frame .side-label{left:4%;top:37%;bottom:auto}
+.locator-photo-wrap .map-frame .front-label{left:4%;top:48%;bottom:auto}
