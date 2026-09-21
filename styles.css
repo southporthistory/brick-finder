@@ -214,3 +214,9 @@ button.story-link{border:0;cursor:pointer;font-family:inherit}
 /* Aerial locator labels: place directly on the two brick paths */
 .locator-photo-wrap .map-frame .side-label{left:4%;top:37%;bottom:auto}
 .locator-photo-wrap .map-frame .front-label{left:4%;top:48%;bottom:auto}
+
+
+/* Final desktop masthead sizing: keep Brick Finder clear of navigation */
+@media(min-width:1121px){
+  .brand-copy h1{font-size:clamp(2.65rem,3.9vw,4.35rem);line-height:.9}
+}
