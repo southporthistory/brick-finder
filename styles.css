@@ -220,3 +220,8 @@ button.story-link{border:0;cursor:pointer;font-family:inherit}
 @media(min-width:1121px){
   .brand-copy h1{font-size:clamp(2.65rem,3.9vw,4.35rem);line-height:.9}
 }
+
+
+/* Story photographs */
+.story-photo-wrap{margin:1rem 0 1.35rem}
+.story-photo{display:block;width:100%;max-height:520px;object-fit:contain;border-radius:8px}
