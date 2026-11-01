@@ -153,5 +153,72 @@
         ]
       }
     ]
+  },
+  {
+    "brick_id": "FJ-FR-C08-B029",
+    "title": "Our Beautiful Home by the Sea",
+    "contributions": [
+      {
+        "contributor": "George and Cindy Arndt",
+        "relationship": "story contributor",
+        "type": "article",
+        "status": "approved",
+        "paragraphs": [
+          "George and Cindy Arndt commemorate themselves and their retirement to the place of their dreams: St. James, Oak Island, and Southport."
+        ]
+      }
+    ]
+  },
+  {
+    "brick_id": "FJ-FR-C08-B058",
+    "title": "In Remembrance of National Airlines Flight 2511",
+    "contributions": [
+      {
+        "contributor": "Linda Silver Bufano",
+        "relationship": "story contributor",
+        "type": "article",
+        "status": "approved",
+        "paragraphs": [
+          "My parents perished in the bombing of NA 2511. I found out that the Southport High School gymnasium was opened as a temporary mortuary and the people of Southport and Bolivia were instrumental in aiding the families of those who perished. Much of what I learned was from MacArthur Randolph of Bolivia and Leila Pigott of Southport.",
+          "This brick commemorates my parents, Martin and Laura Silver, the others who perished, and the people of Southport."
+        ]
+      }
+    ]
+  },
+  {
+    "brick_id": "FJ-FR-C02-B057",
+    "title": "In Loving Memory of Stephen T. Stalls Sr. and Julie Ann Stalls",
+    "contributions": [
+      {
+        "contributor": "Wayne Church",
+        "relationship": "story contributor",
+        "type": "article",
+        "status": "approved",
+        "paragraphs": [
+          "Stephen T. Stalls Sr. — March 22, 1951 – April 20, 2023",
+          "Julie Ann Stalls — August 26, 1956 – June 1, 2023",
+          "My Mom & Step Dad.",
+          "I am celebrating their lives and how much I love and miss them.",
+          "With love from your son, Wayne Church."
+        ]
+      }
+    ]
+  },
+  {
+    "brick_id": "FJ-FR-C09-B041",
+    "title": "Remembering Phil Dauphin Sr.",
+    "contributions": [
+      {
+        "contributor": "Annette Simon",
+        "relationship": "story contributor",
+        "type": "article",
+        "status": "approved",
+        "paragraphs": [
+          "My dad, Phil, and my mom, Rose, were our first overnight guests after my husband and I moved to Southport in 2018. They loved the waterfront's benches and swings, ship-watching, and flag ceremonies, and after each subsequent visit the Navy vet said, \"If I could, I'd be here every night.\"",
+          "After he passed on Christmas Day, 2022, we—with our family in Ohio—felt this one way to honor him and his affection for Southport. (Not to mention, his favorite coffee: fresh and hot.)",
+          "His Dauphin Family."
+        ]
+      }
+    ]
   }
 ]
