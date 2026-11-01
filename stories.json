@@ -202,10 +202,7 @@
           "With love from your son, Wayne Church."
         ]
       }
-    ]
-  },
-  {
-    "brick_id": "FJ-FR-C09-B041",
+    ],     "images": [       {"src": "assets/%20stories/FJ-FR-C02-B057/wayne-church-porch.jpg", "alt": "Wayne Church, center, wearing a Vietnam Veteran cap, posing with two family members on a porch"},       {"src": "assets/%20stories/FJ-FR-C02-B057/wayne-church-azaleas.jpg", "alt": "Wayne Church with a family member in front of bright pink azaleas"},       {"src": "assets/%20stories/FJ-FR-C02-B057/wayne-church-restaurant.jpg", "alt": "Wayne Church with a family member at a restaurant table"}     ]   },   {     "brick_id": "FJ-FR-C09-B041",
     "title": "Remembering Phil Dauphin Sr.",
     "contributions": [
       {
@@ -216,9 +213,4 @@
         "paragraphs": [
           "My dad, Phil, and my mom, Rose, were our first overnight guests after my husband and I moved to Southport in 2018. They loved the waterfront's benches and swings, ship-watching, and flag ceremonies, and after each subsequent visit the Navy vet said, \"If I could, I'd be here every night.\"",
           "After he passed on Christmas Day, 2022, we—with our family in Ohio—felt this one way to honor him and his affection for Southport. (Not to mention, his favorite coffee: fresh and hot.)",
-          "His Dauphin Family."
-        ]
-      }
-    ]
-  }
-]
+          "His Dauphin Family." ] } ], "images": [ {"src": "assets/%20stories/FJ-FR-C09-B041/phil-rose-dauphin-waterfront-illustration.png", "alt": "Illustration by Annette Simon of Phil and Rose Dauphin sitting on a waterfront bench, seen from behind, under a large sun"} ] } ]
